@@ -1,0 +1,272 @@
+{
+  "cases": [
+    {
+      "name": "combined",
+      "logits": [
+        -3,
+        1,
+        2,
+        0.5,
+        -1,
+        3,
+        1.5,
+        -0.5,
+        0,
+        2.5
+      ],
+      "history": [
+        5,
+        2,
+        5
+      ],
+      "temperature": 0.8,
+      "top_k": 5,
+      "top_p": 0.75,
+      "repetition_penalty": 1.2,
+      "processed_logits": [
+        null,
+        null,
+        2.0833332538604736,
+        null,
+        null,
+        3.124999761581421,
+        null,
+        null,
+        null,
+        3.125
+      ],
+      "probabilities": [
+        0,
+        0,
+        0.14997288584709167,
+        0,
+        0,
+        0.42501354217529297,
+        0,
+        0,
+        0,
+        0.42501363158226013
+      ]
+    },
+    {
+      "name": "tied_top_k",
+      "logits": [
+        2,
+        2,
+        1,
+        0,
+        -1
+      ],
+      "history": [
+        0
+      ],
+      "temperature": 1,
+      "top_k": 1,
+      "top_p": 1,
+      "repetition_penalty": 1,
+      "processed_logits": [
+        2,
+        2,
+        null,
+        null,
+        null
+      ],
+      "probabilities": [
+        0.5,
+        0.5,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "zero_top_p",
+      "logits": [
+        0,
+        1,
+        3,
+        2,
+        -1
+      ],
+      "history": [
+        0
+      ],
+      "temperature": 1,
+      "top_k": 0,
+      "top_p": 0,
+      "repetition_penalty": 1,
+      "processed_logits": [
+        null,
+        null,
+        3,
+        null,
+        null
+      ],
+      "probabilities": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "negative_repetition",
+      "logits": [
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ],
+      "history": [
+        0,
+        3,
+        0
+      ],
+      "temperature": 1,
+      "top_k": 0,
+      "top_p": 1,
+      "repetition_penalty": 2,
+      "processed_logits": [
+        -4,
+        -1,
+        0,
+        0.5,
+        2
+      ],
+      "probabilities": [
+        0.0017570691416040063,
+        0.03529167175292969,
+        0.09593271464109421,
+        0.1581663191318512,
+        0.708852231502533
+      ]
+    },
+    {
+      "name": "zero_temperature",
+      "logits": [
+        -1,
+        0,
+        1,
+        2
+      ],
+      "history": [
+        0
+      ],
+      "temperature": 0,
+      "top_k": 0,
+      "top_p": 1,
+      "repetition_penalty": 1,
+      "processed_logits": [
+        -1,
+        0,
+        1,
+        2
+      ],
+      "probabilities": [
+        0.03205860033631325,
+        0.08714431524276733,
+        0.23688280582427979,
+        0.6439142227172852
+      ]
+    },
+    {
+      "name": "top_p_cutoff",
+      "logits": [
+        -1,
+        0,
+        1,
+        2,
+        3
+      ],
+      "history": [
+        0
+      ],
+      "temperature": 1,
+      "top_k": 0,
+      "top_p": 0.9,
+      "repetition_penalty": 1,
+      "processed_logits": [
+        null,
+        null,
+        1,
+        2,
+        3
+      ],
+      "probabilities": [
+        0,
+        0,
+        0.09003056585788727,
+        0.2447284460067749,
+        0.6652408838272095
+      ]
+    },
+    {
+      "name": "negative_temperature",
+      "logits": [
+        -2,
+        0,
+        2
+      ],
+      "history": [
+        0
+      ],
+      "temperature": -0.5,
+      "top_k": 0,
+      "top_p": 1,
+      "repetition_penalty": 1,
+      "processed_logits": [
+        -2,
+        0,
+        2
+      ],
+      "probabilities": [
+        0.01587624102830887,
+        0.11731042712926865,
+        0.8668133616447449
+      ]
+    },
+    {
+      "name": "repetition_after_filter",
+      "logits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "history": [
+        3
+      ],
+      "temperature": 1,
+      "top_k": 2,
+      "top_p": 0.75,
+      "repetition_penalty": 4,
+      "processed_logits": [
+        null,
+        null,
+        2,
+        0.75
+      ],
+      "probabilities": [
+        0,
+        0,
+        0.7772998809814453,
+        0.22270014882087708
+      ]
+    }
+  ],
+  "oracle": {
+    "provider": "Borg installed transformers.generation.logits_process on torch 2.9.1",
+    "dtype": "float32",
+    "date": "2026-10-30",
+    "execution": "isolated CPU container; no Chatterbox/model/CUDA imports",
+    "mask_encoding": "null represents negative infinity",
+    "processor_order": [
+      "TemperatureLogitsWarper",
+      "TopKLogitsWarper",
+      "TopPLogitsWarper",
+      "RepetitionPenaltyLogitsProcessor"
+    ]
+  }
+}

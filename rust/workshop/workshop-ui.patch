@@ -1,0 +1,101 @@
+--- a/ui/index.html
++++ b/ui/index.html
+@@ -175,3 +175,33 @@
+ 
++                            <section id="reference-workshop" class="form-group" hidden aria-label="Reference voice preparation">
++                                <h3>Reference voice preparation</h3>
++                                <label class="form-label" for="reference-source">Input sample</label>
++                                <select id="reference-source" class="form-select"></select>
++                                <label class="form-label" for="reference-isolation">Voice isolation</label>
++                                <select id="reference-isolation" class="form-select">
++                                    <option value="off">Off — original recording</option>
++                                    <option value="gentle">Gentle noise reduction</option>
++                                    <option value="full">Full noise reduction</option>
++                                </select>
++                                <p class="form-hint">Local background-noise reduction. Compare the previews before Apply.</p>
++                                <label class="form-label" for="reference-gain">Sample amplification <output id="reference-gain-value">+0 dB</output></label>
++                                <input id="reference-gain" type="range" min="0" max="24" step="1" value="0" style="width:100%">
++                                <p class="form-hint">Peak protection prevents clipping. Reference amplification does not set generated speech volume.</p>
++                                <label class="form-label" for="reference-original">Original sample preview</label>
++                                <audio id="reference-original" controls preload="none" style="width:100%"></audio>
++                                <button id="reference-preview" type="button" class="btn primary">Preview sample</button>
++                                <button id="reference-cancel" type="button" class="btn secondary" hidden>Cancel cleanup</button>
++                                <label class="form-label" for="reference-processed">Processed sample preview</label>
++                                <audio id="reference-processed" controls preload="none" style="width:100%" hidden></audio>
++                                <label class="form-label" for="reference-choice">Recording to use</label>
++                                <select id="reference-choice" class="form-select">
++                                    <option value="original">Original</option>
++                                    <option value="processed" disabled>Processed</option>
++                                </select>
++                                <p class="form-hint">Apply retains originals and the chosen processed recording in Borg's voice library.</p>
++                                <button id="reference-apply" type="button" class="btn primary" disabled>Apply</button>
++                                <p id="reference-status" role="status" aria-live="polite"></p>
++                                <a href="/vendor/reference-isolation.LICENSE.txt" download>Noise reduction licences</a>
++                            </section>
+                             <details class="collapsible">
+                                 <summary class="collapsible__summary">
+@@ -566,1 +596,1 @@
+-    <script src="script.js" defer></script>
++    <script src="script.js" type="module"></script>
+--- a/ui/script.js
++++ b/ui/script.js
+@@ -1,1 +1,2 @@
++import { setupReferenceWorkshop } from '/vendor/reference-workshop.js';
+ // ui/script.js
+@@ -1410,23 +1411,20 @@
+-    if (cloneImportButton && cloneFileInput) {
+-        cloneImportButton.addEventListener('click', () => cloneFileInput.click());
+-        cloneFileInput.addEventListener('change', () => handleFileUpload(cloneFileInput, '/upload_reference', (result) => {
+-            initialReferenceFiles = result.all_reference_files || [];
+-            populateReferenceFiles();
+-            const firstUploaded = result.uploaded_files?.[0];
+-            if (firstUploaded && cloneReferenceSelect && Array.from(cloneReferenceSelect.options).some(opt => opt.value === firstUploaded)) {
+-                cloneReferenceSelect.value = firstUploaded;
+-            }
+-        }, cloneImportButton));
+-    }
+-
+-    if (predefinedVoiceImportButton && predefinedVoiceFileInput) {
+-        predefinedVoiceImportButton.addEventListener('click', () => predefinedVoiceFileInput.click());
+-        predefinedVoiceFileInput.addEventListener('change', () => handleFileUpload(predefinedVoiceFileInput, '/upload_predefined_voice', (result) => {
+-            initialPredefinedVoices = result.all_predefined_voices || [];
+-            populatePredefinedVoices();
+-            const firstUploadedFilename = result.uploaded_files?.[0];
+-            if (firstUploadedFilename && predefinedVoiceSelect && initialPredefinedVoices.some(v => v.filename === firstUploadedFilename)) {
+-                predefinedVoiceSelect.value = firstUploadedFilename;
+-            }
+-        }, predefinedVoiceImportButton));
+-    }
++    // Import stages one local draft; only its Apply transaction retains voices.
++    if (cloneImportButton && cloneFileInput) {
++        cloneImportButton.addEventListener('click', () => cloneFileInput.click());
++    }
++    if (predefinedVoiceImportButton && predefinedVoiceFileInput) {
++        predefinedVoiceImportButton.addEventListener('click', () => predefinedVoiceFileInput.click());
++    }
++    setupReferenceWorkshop({
++        inputs: [cloneFileInput, predefinedVoiceFileInput].filter(Boolean),
++        onApplied(result, selected) {
++            initialPredefinedVoices = result.all_predefined_voices || [];
++            populatePredefinedVoices();
++            predefinedVoiceSelect.value = selected;
++            const radio = document.querySelector('input[name="voice_mode"][value="predefined"]');
++            radio.checked = true;
++            radio.dispatchEvent(new Event('change', { bubbles: true }));
++            debouncedSaveState();
++            showNotification('Reference voice updated in Borg’s voice library.', 'success');
++        }
++    });
+--- a/ui/styles.css
++++ b/ui/styles.css
+@@ -1934,3 +1934,10 @@
+ @media (prefers-reduced-motion:reduce) {
+     .myth-workshop *, .myth-workshop *::before, .myth-workshop *::after { transition:none!important; animation:none!important; }
+ }
++/* The reference editor follows the workshop's existing sidebar controls. */
++.myth-workshop #reference-workshop:not([hidden]) { display:grid; gap:10px; border-top:1px solid #302b26; padding-top:20px; }
++.myth-workshop #reference-workshop .form-label,
++.myth-workshop #reference-workshop .form-hint { margin:0; }
++.myth-workshop #reference-workshop h3 { font-size:16px; margin:0 0 6px; text-transform:lowercase; }
++.myth-workshop #reference-workshop audio { max-width:100%; }
++.myth-workshop #reference-status { font-size:12px; line-height:1.5; overflow-wrap:anywhere; }

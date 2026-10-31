@@ -1,0 +1,463 @@
+{
+  "schema_version": 1,
+  "export_date": "2026-10-31",
+  "source_revision": "d3ee93b5a66a3ae888ca532afd38ec87e379107f",
+  "source_prefix": "borg/chatterbox/rust/",
+  "source_files": [
+    {
+      "source": "borg/chatterbox/rust/Cargo.lock",
+      "path": "rust/Cargo.lock",
+      "sha256": "bc3d1578fd74e85cf22f5857c32bf1930a9fc121232195a83267694636c71735"
+    },
+    {
+      "source": "borg/chatterbox/rust/Cargo.toml",
+      "path": "rust/Cargo.toml",
+      "sha256": "f5b44db6bd383dee8222823e783ccb3886cdfe485afa29599f05d0529198f668"
+    },
+    {
+      "source": "borg/chatterbox/rust/Dockerfile",
+      "path": "rust/Dockerfile",
+      "sha256": "9320915773fc0a2fef7a202b39a77dc15a8320ddbc93086f3f99f225f4cb62fd"
+    },
+    {
+      "source": "borg/chatterbox/rust/LICENSE",
+      "path": "rust/LICENSE",
+      "sha256": "ebd839b7396af8ed417accdadf5189c9a11900925522550b673c6b610778f3c8"
+    },
+    {
+      "source": "borg/chatterbox/rust/README.md",
+      "path": "rust/README.md",
+      "sha256": "1ba847042402f12324a3fcc54ab64ec0876fac4ae9fdf220cb573cb14dfb15a8"
+    },
+    {
+      "source": "borg/chatterbox/rust/native/build.sh",
+      "path": "rust/native/build.sh",
+      "sha256": "c052e5918fe49718030d3eb1f16585567f35db831f950bef99241bf4a7c01ffe"
+    },
+    {
+      "source": "borg/chatterbox/rust/native/conformer.inc",
+      "path": "rust/native/conformer.inc",
+      "sha256": "bc32452f994e84f527fa40158cac4ce5bf2ad596224f7172e123e2e924f9e664"
+    },
+    {
+      "source": "borg/chatterbox/rust/native/export_conformer.py",
+      "path": "rust/native/export_conformer.py",
+      "sha256": "2afac49868cdf4c8a97fc1be46027b69ac19a3c70fe5f3f43a0e735360b80010"
+    },
+    {
+      "source": "borg/chatterbox/rust/native/export_hift.py",
+      "path": "rust/native/export_hift.py",
+      "sha256": "2115035e93aab79ea7c73a47ee8513b9bd56f77d3d5796f0e800a3eccf55b03e"
+    },
+    {
+      "source": "borg/chatterbox/rust/native/export_meanflow.py",
+      "path": "rust/native/export_meanflow.py",
+      "sha256": "5a807345bf2a510e578c76863996aaae7f1c5182e4c32892583624caf4a347ba"
+    },
+    {
+      "source": "borg/chatterbox/rust/native/hift.inc",
+      "path": "rust/native/hift.inc",
+      "sha256": "53367a13277b62dfedfa963fa7291cf6cff7fd0a70dcaf1a12dda20350f92e00"
+    },
+    {
+      "source": "borg/chatterbox/rust/native/meanflow.inc",
+      "path": "rust/native/meanflow.inc",
+      "sha256": "3a891921b7a61a4c02a7c6dbee373132fd8161b024a983fa179e0a4f36980fbc"
+    },
+    {
+      "source": "borg/chatterbox/rust/native/tensorrt.cpp",
+      "path": "rust/native/tensorrt.cpp",
+      "sha256": "a5b0d3f185e41c892cabcf119c9bafbb1cfd993e5afbf2f08427547434e62799"
+    },
+    {
+      "source": "borg/chatterbox/rust/source-provenance.json",
+      "path": "rust/source-provenance.json",
+      "sha256": "01d45469f58641eb5befe1559730c3d563894178e66c5108ba41e7cf6bdcda96"
+    },
+    {
+      "source": "borg/chatterbox/rust/src/audio_output.rs",
+      "path": "rust/src/audio_output.rs",
+      "sha256": "6e03c9d1cff096c9093f3cf81f4361c6316949cc7deb238687d3df928bbf23a6"
+    },
+    {
+      "source": "borg/chatterbox/rust/src/audio_preparation.rs",
+      "path": "rust/src/audio_preparation.rs",
+      "sha256": "e2df1bd5e1fcc07c11c105271664bc363676293cc546634a6a4efb34dd3e5cfc"
+    },
+    {
+      "source": "borg/chatterbox/rust/src/campplus.rs",
+      "path": "rust/src/campplus.rs",
+      "sha256": "cd612139c365d07bbe51e0dd60bba81b0b0dddc8ef36c10d51c528045b8c4550"
+    },
+    {
+      "source": "borg/chatterbox/rust/src/conditioning.rs",
+      "path": "rust/src/conditioning.rs",
+      "sha256": "3522560aec093c3e157a787fdb43e1b19bbc6ed8cdf602c500855a2d815b8a1e"
+    },
+    {
+      "source": "borg/chatterbox/rust/src/conformer.rs",
+      "path": "rust/src/conformer.rs",
+      "sha256": "5c56c6c440eda80e655818e8ddd6853df65c2b408dc756e42980629d275bd51e"
+    },
+    {
+      "source": "borg/chatterbox/rust/src/conformer_cache_tests.rs",
+      "path": "rust/src/conformer_cache_tests.rs",
+      "sha256": "c1c80a90a3094d110788307d39576a8ae7234f7a9881fa107810b267cac5737d"
+    },
+    {
+      "source": "borg/chatterbox/rust/src/conformer_trt.rs",
+      "path": "rust/src/conformer_trt.rs",
+      "sha256": "329a3d0d43e8ec8ff99c0415bf2212ba990f034d3b085565ea577e22864dcc28"
+    },
+    {
+      "source": "borg/chatterbox/rust/src/generation.rs",
+      "path": "rust/src/generation.rs",
+      "sha256": "4fa7a91d8c1aacaaccb9fcf98a90139338cc4d90a6191b90b240f28fc1f84610"
+    },
+    {
+      "source": "borg/chatterbox/rust/src/gpu.rs",
+      "path": "rust/src/gpu.rs",
+      "sha256": "383c6d51258af3bfda71c923dabff329650985d7ea23b187c5064b5c5ae2c1ff"
+    },
+    {
+      "source": "borg/chatterbox/rust/src/hift.rs",
+      "path": "rust/src/hift.rs",
+      "sha256": "df30e8e7648340faf5d7a3d6caea7420feb1591f4c7961b5c49f8b986efc53de"
+    },
+    {
+      "source": "borg/chatterbox/rust/src/hift_trt.rs",
+      "path": "rust/src/hift_trt.rs",
+      "sha256": "af983af99efee909ebf178a36f717f8b28eef4439310a676c5adae4714ed63d4"
+    },
+    {
+      "source": "borg/chatterbox/rust/src/lib.rs",
+      "path": "rust/src/lib.rs",
+      "sha256": "2940bc1b17001e7f96694a78ba87a0e26185cf4da8a1f3712f8106cfe4c4fa78"
+    },
+    {
+      "source": "borg/chatterbox/rust/src/main.rs",
+      "path": "rust/src/main.rs",
+      "sha256": "089f2473cab89ac8cd705d0342011236cacde3ea9e7fc52630146b39f367f22b"
+    },
+    {
+      "source": "borg/chatterbox/rust/src/meanflow.rs",
+      "path": "rust/src/meanflow.rs",
+      "sha256": "31404caa6dcb09dfaf11e519785dcdc6cebc43aa5b8f15399165106e2f39731d"
+    },
+    {
+      "source": "borg/chatterbox/rust/src/meanflow_trt.rs",
+      "path": "rust/src/meanflow_trt.rs",
+      "sha256": "4e61bf7f8630caa281b425e93f7811be213aa1aa9ddbe09c719a2db61111be7d"
+    },
+    {
+      "source": "borg/chatterbox/rust/src/npy.rs",
+      "path": "rust/src/npy.rs",
+      "sha256": "9175619a8993b263b8da71d3b391d335d1c665fedbd8ad22f85589d5ea715ac5"
+    },
+    {
+      "source": "borg/chatterbox/rust/src/pipeline.rs",
+      "path": "rust/src/pipeline.rs",
+      "sha256": "8b0d7ce576ede2af3bdbe058425f73c67f3275c156de63615a544c57809af32d"
+    },
+    {
+      "source": "borg/chatterbox/rust/src/s3_tokenizer.rs",
+      "path": "rust/src/s3_tokenizer.rs",
+      "sha256": "62babf974329020eb42da37ba80d1e416dc3a9d01027b34533659fb108fcf9ea"
+    },
+    {
+      "source": "borg/chatterbox/rust/src/s3gen.rs",
+      "path": "rust/src/s3gen.rs",
+      "sha256": "c153d102ffeb622b670a6b7cc847031d729afa033383dc4212ec6c585fc1f0ef"
+    },
+    {
+      "source": "borg/chatterbox/rust/src/sampling.rs",
+      "path": "rust/src/sampling.rs",
+      "sha256": "0fc6943bf51767c623195fd2e676c3c5c856f9c002e93a559c3e6a688a2b21b8"
+    },
+    {
+      "source": "borg/chatterbox/rust/src/service.rs",
+      "path": "rust/src/service.rs",
+      "sha256": "77dab8a905f41f0e29b1f3897ff05121f6015cd5a560a628502b8ce7dfb81780"
+    },
+    {
+      "source": "borg/chatterbox/rust/src/tensorrt.rs",
+      "path": "rust/src/tensorrt.rs",
+      "sha256": "78ea0eb923284b7c8f973cffbe554321fed2099acb2880e46149a197c351a37d"
+    },
+    {
+      "source": "borg/chatterbox/rust/src/text.rs",
+      "path": "rust/src/text.rs",
+      "sha256": "1efea1899de399604225ecaae054066d51ec5b0b9d2a0dea4473521137e7584e"
+    },
+    {
+      "source": "borg/chatterbox/rust/src/tokenizer.rs",
+      "path": "rust/src/tokenizer.rs",
+      "sha256": "f5ca429c1658c6e4223279ffad2e18cf388d15c9f389f777a505e48e34618d90"
+    },
+    {
+      "source": "borg/chatterbox/rust/src/trace.rs",
+      "path": "rust/src/trace.rs",
+      "sha256": "f0e88d8d4fed1676fbe52bd54f1e7ef5e85001215a46d8910f5f99538cd2d1fe"
+    },
+    {
+      "source": "borg/chatterbox/rust/src/voice_encoder.rs",
+      "path": "rust/src/voice_encoder.rs",
+      "sha256": "8fe06714d4706bce0586198d97f7bb3cb6a0b8a549df18aa35e51ee1dd1169e9"
+    },
+    {
+      "source": "borg/chatterbox/rust/src/voice_preparation.rs",
+      "path": "rust/src/voice_preparation.rs",
+      "sha256": "66162586df0347c51450e065e4de8f2800610247e368c79bb7eb875fe2c51b00"
+    },
+    {
+      "source": "borg/chatterbox/rust/src/workshop.rs",
+      "path": "rust/src/workshop.rs",
+      "sha256": "66ed85b9a1cc31a8c0f0469afd0507221e26c336187920529950e29c870a7b39"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/audio_output.rs",
+      "path": "rust/tests/audio_output.rs",
+      "sha256": "b6cb3e15ffc8d2c60a05a7fb8e92c15e397c7e6b44b76d0d95274bd5cd448cde"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/audio_preparation.rs",
+      "path": "rust/tests/audio_preparation.rs",
+      "sha256": "43517cb85d840fd64b3c99fa7a7603afc5f5968735e2e7e45c594a9104680d0e"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/audio_tempo.rs",
+      "path": "rust/tests/audio_tempo.rs",
+      "sha256": "a62757bd1e40687d8f0d19b1f18226d4a6d198e053d1cbd0e92c5eb10771fa44"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/bridge_lifetime.rs",
+      "path": "rust/tests/bridge_lifetime.rs",
+      "sha256": "c1245f596630f9b4de3c29dc53411f9d8f4e913f56247d870e564670607c03bd"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/campplus.rs",
+      "path": "rust/tests/campplus.rs",
+      "sha256": "0867dbdaee831d536ff66993efa636317f776b9894c9bc566fa702fb61362ccc"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/capture_audio_preparation_oracle.py",
+      "path": "rust/tests/capture_audio_preparation_oracle.py",
+      "sha256": "62a5283e907829b789310e4ca8654df28d8ec53692e11ab5e93d5783763271a6"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/capture_campplus_oracle.py",
+      "path": "rust/tests/capture_campplus_oracle.py",
+      "sha256": "6b16998c29af0b38270ad26b32edac36220545cf30328cc147634265bf94c851"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/capture_conditioning_oracle.py",
+      "path": "rust/tests/capture_conditioning_oracle.py",
+      "sha256": "6bcad2301a6997fb5578af94a4c308dd2ec6b9d48f400213aedbbd81a77cbf80"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/capture_conformer_oracle.py",
+      "path": "rust/tests/capture_conformer_oracle.py",
+      "sha256": "123859dd77f81d8e27b213d13e9955b11739e8b24eb08df3c6af00af7b441cd9"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/capture_hift_oracle.py",
+      "path": "rust/tests/capture_hift_oracle.py",
+      "sha256": "1846de7cdcb4af8428338407e4c6da67244500ce928039c22b8a9659dd148163"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/capture_meanflow_oracle.py",
+      "path": "rust/tests/capture_meanflow_oracle.py",
+      "sha256": "df2c120b84405c5fa29e5b3d5bf3978811ffd842069f91268d6dbe65473e1931"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/capture_mel_oracle.py",
+      "path": "rust/tests/capture_mel_oracle.py",
+      "sha256": "74be1b8e56fdc3a289b11098ed3f5812488555017ca146c70800f3459743873c"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/capture_output_oracle.py",
+      "path": "rust/tests/capture_output_oracle.py",
+      "sha256": "807fba5f2403e9b3173e41777bf3dc8fea63808cde22562e33820e9f5974e826"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/capture_s3_tokenizer_oracle.py",
+      "path": "rust/tests/capture_s3_tokenizer_oracle.py",
+      "sha256": "1da2f5d5ee31d8c7b2a37263d6f5e07e8ed8d78be3c741d94b3419a33dc4ce9f"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/capture_s3gen_reference_oracle.py",
+      "path": "rust/tests/capture_s3gen_reference_oracle.py",
+      "sha256": "20687461204e3d449b03181f1257b5c96d10bbfb5cd0e3643be1ddad91865024"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/capture_tempo_oracle.py",
+      "path": "rust/tests/capture_tempo_oracle.py",
+      "sha256": "c0eece0ffa7fd09d799f7e295878e3d133a62fc2f87817e001ec97bb807cc24f"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/capture_tokenizer_oracle.py",
+      "path": "rust/tests/capture_tokenizer_oracle.py",
+      "sha256": "60426c5aa2070ba59e9681b257b90a81d15056c708015c2b38c55b85624b9830"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/capture_voice_encoder_oracle.py",
+      "path": "rust/tests/capture_voice_encoder_oracle.py",
+      "sha256": "eab32cd068529944c3dfca95f91c786f89746ad3234eecc864b542069199e086"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/capture_voice_preparation_oracle.py",
+      "path": "rust/tests/capture_voice_preparation_oracle.py",
+      "sha256": "937d29fb984036b6b86609fb8aaa482d1b2fe3481291e1e9bf3d2a98d522acf3"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/conditioning-oracle.json",
+      "path": "rust/tests/conditioning-oracle.json",
+      "sha256": "0d9a5e0f36f2e2d626f87bb1c8701adf737851b9dc7b01faa1f03180478edcbf"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/conditioning_cli.rs",
+      "path": "rust/tests/conditioning_cli.rs",
+      "sha256": "459b1cf19fd5a7134b96514836a695ab2590bca1eb82563abd2324f989891d52"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/conditioning_parity.rs",
+      "path": "rust/tests/conditioning_parity.rs",
+      "sha256": "118d9a49c10372700dc3e05cd30c271579141be7ff701068245aff83d0dd7cf9"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/conformer.rs",
+      "path": "rust/tests/conformer.rs",
+      "sha256": "08213567a015d3a53109998acb1fcdf63ab8568f0e492cbde4cd12c0d63ab278"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/engine_cache.rs",
+      "path": "rust/tests/engine_cache.rs",
+      "sha256": "9bbc4d91b87803d4e339c8c3a8310440b9f0644be43445a66f5d2f250fe586d3"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/generation_parity.rs",
+      "path": "rust/tests/generation_parity.rs",
+      "sha256": "49a295cf633ecc547378080d65859346437e03da15bce9ad4ac90b0a2d855fad"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/gpu.rs",
+      "path": "rust/tests/gpu.rs",
+      "sha256": "a37d3a31f610f69503dc9932cc72a808e999b55ee8f52e75e7116e65a3749fec"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/hift.rs",
+      "path": "rust/tests/hift.rs",
+      "sha256": "a2a29622ac624159f2fe45b31d62c8143327078f83203edeea70cb2b9e96fc00"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/meanflow.rs",
+      "path": "rust/tests/meanflow.rs",
+      "sha256": "135721782c97c2186a2a3fd0e7724281118a167b264c68ff22738aa5b356773c"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/meanflow_graph.rs",
+      "path": "rust/tests/meanflow_graph.rs",
+      "sha256": "133753da054d3c50adbb990f43737851ba12e2bf00344c930cd7a6443b5d4e1b"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/mel_conditioning.rs",
+      "path": "rust/tests/mel_conditioning.rs",
+      "sha256": "76e3b8361edaa4e4d517a304efe8ae7229d7165eeed06075168f6a327df9b176"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/native_pipeline.rs",
+      "path": "rust/tests/native_pipeline.rs",
+      "sha256": "26c929c9bc4cebb8637774ba1065b7fdc478d541ded1d3e78a53726df22de604"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/output_finish.rs",
+      "path": "rust/tests/output_finish.rs",
+      "sha256": "5b1fc4daaa3983f3db817c11969ca7060bc866370a694d0391cf554984832578"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/punctuation-oracle.json",
+      "path": "rust/tests/punctuation-oracle.json",
+      "sha256": "123978cd8cd0b4001d0836332145b87d9ca2ed0445786dc506a7872d8b89838a"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/s3_tokenizer.rs",
+      "path": "rust/tests/s3_tokenizer.rs",
+      "sha256": "7cc603b5d34c4ea86d5c1cf7cdefa7e14a9d036d49034338b5a9005e1c8dbd8b"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/s3gen_reference.rs",
+      "path": "rust/tests/s3gen_reference.rs",
+      "sha256": "79bd2c2dc0dd26bce4d74a52e7f99a065836a6f6f935529b0c3af1a6ae555d95"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/sampling-oracle.json",
+      "path": "rust/tests/sampling-oracle.json",
+      "sha256": "61df36d0b044cea937eced6a515902db7d278e18e36dbf493f7d289ae520c5c3"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/sampling_oracle.rs",
+      "path": "rust/tests/sampling_oracle.rs",
+      "sha256": "1a300867891cf463e0ada9e2283f750caf2487d54d7b84bd9969901cba123b4c"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/service_http.rs",
+      "path": "rust/tests/service_http.rs",
+      "sha256": "bda2261229339d100f7c1fb59f50f48e087b6aa8ffdecb1186e0876c042401f2"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/stream_state.rs",
+      "path": "rust/tests/stream_state.rs",
+      "sha256": "70027036b940490bd7d4ec1479d5cfa9decc6e2321a2a6b6ec3a94041d6d358a"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/text_parity.rs",
+      "path": "rust/tests/text_parity.rs",
+      "sha256": "69a013c2759b887a9294b60c0162e7c50838a482567e2216e3a4b2d9e87b9e5d"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/tokenizer-oracle.json",
+      "path": "rust/tests/tokenizer-oracle.json",
+      "sha256": "adf1358ddd71778cbef1afc0e5bb1c656edc3863f983a4ec82a85137eb5d9df4"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/tokenizer_parity.rs",
+      "path": "rust/tests/tokenizer_parity.rs",
+      "sha256": "2cbe3aefb73e505c7c04e01de935df6741c6e9aa8d7a1f873b11ddf4648a7d3d"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/verify_voice_publication_borg.py",
+      "path": "rust/tests/verify_voice_publication_borg.py",
+      "sha256": "0316d3bfd423fa06686e11dbfb4b94195b33c235b53215b1051a4b5e988c5c7b"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/voice_encoder.rs",
+      "path": "rust/tests/voice_encoder.rs",
+      "sha256": "3858c7fd3c95b266fa1fa00ac94724b30679eefc1fc511783043cfe65b0c63c5"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/voice_preparation.rs",
+      "path": "rust/tests/voice_preparation.rs",
+      "sha256": "d82dc8df6bae734ab0594d6535d851cb309d252c3c8232b47de9089611526815"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/voice_publication.rs",
+      "path": "rust/tests/voice_publication.rs",
+      "sha256": "2d3dd08b03925a2ec208e94180a95c0b8bd6a650b5a9b1c296722dcafea880ed"
+    },
+    {
+      "source": "borg/chatterbox/rust/tests/workshop_http.rs",
+      "path": "rust/tests/workshop_http.rs",
+      "sha256": "d4fc579359d64834fc0d132b610b4746d100006691a9a9ab753d8e2cce340ecb"
+    }
+  ],
+  "workshop": "Exact deployed Borg workshop assets plus their TypeScript sources",
+  "samples": "Four original recordings verified against active workshop state checksums",
+  "excluded": [
+    "private Hailstorm Git history",
+    "credentials",
+    "chat and workshop user state",
+    "model weights and machine-specific TensorRT engines",
+    "generated build targets"
+  ],
+  "deployment": "Exact production launcher and catalogue examples; existing absolute asset paths must be supplied or adapted on restore"
+}

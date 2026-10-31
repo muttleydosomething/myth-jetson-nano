@@ -1,0 +1,166 @@
+[
+  [
+    "",
+    "You need to add some text for me to talk."
+  ],
+  [
+    " ",
+    "."
+  ],
+  [
+    "\t\n",
+    "."
+  ],
+  [
+    "hello",
+    "Hello."
+  ],
+  [
+    " hello",
+    "hello."
+  ],
+  [
+    "\thello",
+    "hello."
+  ],
+  [
+    "hello  world",
+    "Hello world."
+  ],
+  [
+    "hello\nworld",
+    "Hello world."
+  ],
+  [
+    "hello world",
+    "Hello world."
+  ],
+  [
+    "hello\u001cworld",
+    "Hello world."
+  ],
+  [
+    "hello\u001dworld",
+    "Hello world."
+  ],
+  [
+    "hello\u001eworld",
+    "Hello world."
+  ],
+  [
+    "hello\u001fworld",
+    "Hello world."
+  ],
+  [
+    "helloworld",
+    "Hello world."
+  ],
+  [
+    "hello​world",
+    "Hello​world."
+  ],
+  [
+    "“hello”",
+    "\"hello\"."
+  ],
+  [
+    "‘hello’",
+    "'hello'."
+  ],
+  [
+    "hello…world",
+    "Hello, world."
+  ],
+  [
+    "hello…",
+    "Hello,"
+  ],
+  [
+    "hello : world",
+    "Hello, world."
+  ],
+  [
+    "hello , world",
+    "Hello, world."
+  ],
+  [
+    "hello — world",
+    "Hello - world."
+  ],
+  [
+    "hello – world",
+    "Hello - world."
+  ],
+  [
+    "hello!",
+    "Hello!"
+  ],
+  [
+    "hello?",
+    "Hello?"
+  ],
+  [
+    "hello-",
+    "Hello-"
+  ],
+  [
+    "hello,",
+    "Hello,"
+  ],
+  [
+    "hello.",
+    "Hello."
+  ],
+  [
+    "ßeta",
+    "SSeta."
+  ],
+  [
+    "éclair",
+    "Éclair."
+  ],
+  [
+    "ǰa",
+    "J̌a."
+  ],
+  [
+    "ﬃve",
+    "FFIve."
+  ],
+  [
+    "1hello",
+    "1hello."
+  ],
+  [
+    "中hello",
+    "中hello."
+  ],
+  [
+    "a\r\n\tb",
+    "A b."
+  ],
+  [
+    "a … : “b” — c",
+    "A, , \"b\" - c."
+  ],
+  [
+    "  lowercase end  ",
+    "lowercase end."
+  ],
+  [
+    "hello  , world",
+    "Hello, world."
+  ],
+  [
+    "\u001cword\u001f",
+    "word."
+  ],
+  [
+    " word ",
+    "word."
+  ],
+  [
+    "hello world",
+    "Hello world."
+  ]
+]

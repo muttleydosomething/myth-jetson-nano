@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "model": "myth",
+  "model_aliases": [
+    "chatterbox-borg",
+    "chatterbox-turbo",
+    "chatterbox"
+  ],
+  "voices": {},
+  "sampling": {
+    "temperature": 0.8,
+    "top_k": 1000,
+    "top_p": 0.95,
+    "repetition_penalty": 1.2
+  },
+  "seed": 42,
+  "max_gen_len": 600,
+  "workshop": {
+    "ui_root": "/workshop/ui",
+    "state_root": "/home/muttleydosomething/myth-native-import-20261030-ownership-verified/retained-three-owner/state",
+    "preparation": {
+      "path": "/home/muttleydosomething/chatterbox-jetson/patches/native-runtime/preparation.json",
+      "sha256": "200e644ebc7337f09a568ab34a3318ea14da6cc466b52404404a96f305af10d6"
+    },
+    "prompt": {
+      "path": "/var/lib/docker/volumes/chatterbox-outputs/_data/rust-prepared-20261030/retained-assets.json",
+      "sha256": "7445cb6b444de34acbe2e1cb3e843641ab44fd446525d42896b6b1bc91eaffc4"
+    },
+    "pipeline": {
+      "path": "/myth/pipeline.json",
+      "sha256": "6fc80f9f7354f209ae5545d274a9d1cf73f8b1dc2a445df5872f4faa383d202f"
+    },
+    "delete_authority_sha256": "d6424ce78111490115979f81f4ff3a2c0ff62f3b98fdcc0192c99a412bff214d"
+  }
+}

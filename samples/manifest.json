@@ -1,0 +1,26 @@
+[
+  {
+    "voice": "ships computer",
+    "path": "samples/voyager-computer.wav",
+    "sha256": "106790ddbcc5f9d319819164c57a9989b7d564d4bbbf3deb4bf1077e3c0709f5",
+    "bytes": 560316
+  },
+  {
+    "voice": "tpol",
+    "path": "samples/tpol_amplified_clean.wav",
+    "sha256": "8660ca0b831cf0b53a031345751592e9812999eaadd46c78c1f5e2dcb657bbb7",
+    "bytes": 1423236
+  },
+  {
+    "voice": "the doctor",
+    "path": "samples/the-doctor.wav",
+    "sha256": "e7a4144daa260bd0c2034a9f5493ea1765e0c361e2a23567e2d05a440f7b408a",
+    "bytes": 1214914
+  },
+  {
+    "voice": "seven",
+    "path": "samples/seven-normal.wav",
+    "sha256": "b286151c5e1fadc80d6d57f7d6ed3b46f349ff73aef597a7f23b5802b54c6b17",
+    "bytes": 1966124
+  }
+]

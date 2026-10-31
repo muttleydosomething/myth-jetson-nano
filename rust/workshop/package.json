@@ -1,0 +1,12 @@
+{
+  "name": "myth-reference-workshop",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "dependencies": {
+    "@shiguredo/rnnoise-wasm": "2025.1.5"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12"
+  }
+}

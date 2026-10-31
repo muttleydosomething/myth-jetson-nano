@@ -1,0 +1,69 @@
+--- a/script.js
++++ b/script.js
+@@ -1,4 +1,5 @@
+ import { setupReferenceWorkshop } from '/vendor/reference-workshop.js';
++import { createSpeechStream } from '/vendor/streaming-workshop.js';
+ // ui/script.js
+ // Client-side JavaScript for the Chatterbox TTS Server web interface.
+ // Handles UI interactions, API communication, audio playback, and settings management.
+@@ -1051,6 +1052,12 @@
+         setTimeout(() => audioPlayerContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 150);
+     }
+ 
++    // Share the existing Generate controls and finished WaveSurfer player.
++    const speechStream = createSpeechStream();
++    document.addEventListener('click', event => {
++        if (event.target instanceof Element && event.target.closest('#play-btn')) speechStream.cancel();
++    }, { capture: true });
++
+     // --- TTS Generation Logic ---
+     function getTTSFormData() {
+         const jsonData = {
+@@ -1080,19 +1087,27 @@
+         const startTime = performance.now();
+         const jsonData = getTTSFormData();
+         try {
+-            const response = await fetch(`${API_BASE_URL}/tts`, {
+-                method: 'POST',
+-                headers: { 'Content-Type': 'application/json' },
+-                body: JSON.stringify(jsonData)
+-            });
+-            if (!response.ok) {
+-                const errorResult = await response.json().catch(() => ({ detail: `HTTP error ${response.status}` }));
+-                throw new Error(errorResult.detail || 'TTS generation failed.');
+-            }
+-            const audioBlob = await response.blob();
++            let audioBlob, filenameFromServer;
++            if (currentModelInfo?.incremental_audio && jsonData.output_format === 'wav') {
++                wavesurfer?.pause();
++                audioBlob = await speechStream.generate(jsonData);
++                filenameFromServer = 'myth-output.wav';
++            } else {
++                // Existing compressed downloads keep their complete-file contract.
++                speechStream.cancel();
++                const response = await fetch(`${API_BASE_URL}/tts`, {
++                    method: 'POST', headers: { 'Content-Type': 'application/json' },
++                    body: JSON.stringify(jsonData)
++                });
++                if (!response.ok) {
++                    const errorResult = await response.json().catch(() => ({ detail: `HTTP error ${response.status}` }));
++                    throw new Error(errorResult.detail || 'TTS generation failed.');
++                }
++                audioBlob = await response.blob();
++                filenameFromServer = response.headers.get('Content-Disposition')?.split('filename=')[1]?.replace(/"/g, '') || 'generated_audio.wav';
++            }
+             const endTime = performance.now();
+             const genTime = ((endTime - startTime) / 1000).toFixed(2);
+-            const filenameFromServer = response.headers.get('Content-Disposition')?.split('filename=')[1]?.replace(/"/g, '') || 'generated_audio.wav';
+             const resultDetails = {
+                 outputUrl: URL.createObjectURL(audioBlob), filename: filenameFromServer, genTime: genTime,
+                 submittedVoiceMode: jsonData.voice_mode, submittedPredefinedVoice: jsonData.predefined_voice_id,
+@@ -1102,7 +1117,7 @@
+             showNotification('Audio generated successfully!', 'success');
+         } catch (error) {
+             console.error('TTS Generation Error:', error);
+-            showNotification(error.message || 'An unknown error occurred during TTS generation.', 'error');
++            if (error.name !== 'AbortError') showNotification(error.message || 'An unknown error occurred during TTS generation.', 'error');
+         } finally {
+             isGenerating = false;
+             hideLoadingOverlay();
